@@ -1,0 +1,13 @@
+d(1..n).
+
+{ q(X,Y) : d(X), d(Y) }.
+#instance q/2.
+
+1 { qp(X,Y) : d(Y) } 1 :- d(X).
+qp(X,Y) :- q(X,Y).
+
+:- qp(X,Y1),qp(X,Y2),Y1 < Y2.
+:- qp(X1,Y),qp(X2,Y),X1 < X2.
+:- qp(X1,Y1),qp(X2,Y2),X1 < X2,Y1 < Y2,d(Z1),d(Z2),Z1 = X2 - X1,Z2 = Y2 - Y1,Z1 = Z2.
+:- qp(X1,Y1),qp(X2,Y2),X1 < X2,Y2 < Y1,d(Z1),d(Z2),Z1 = X2 - X1,Z2 = Y1 - Y2,Z1 = Z2.
+#const n = 14.
