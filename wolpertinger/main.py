@@ -9,7 +9,6 @@ import warnings
 from arg_parser import init_parser
 from setproctitle import setproctitle as ptitle
 from normalized_env import NormalizedEnv
-from shower_environment import ShowerEnv
 from wasp_environment import WaspEnv
 import gym
 from wasp_environment import NB_REQUESTS, CACHE_SIZE
