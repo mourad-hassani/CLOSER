@@ -11,3 +11,13 @@ sudo 2to3 -w /home/mourad/miniconda3/envs/closer/lib/python3.7/site-packages/pyf
 python -m pip install gym==0.9.6
 python -m pip install setproctitle
 ```
+Run the three commands in three separate terminals
+```bash
+.Reasoner/build/release/wasp --executeRL=true < nqueens-instances/stream/enc-30
+```
+```bash
+cat Reasoner/nqueens-instances/stream/log-30 > reconfigurate
+```
+```bash
+python wolpertinger/main.py
+```
